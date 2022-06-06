@@ -8,12 +8,8 @@ This script scans an input fasta file for sequences that match or are complement
 ## Requirements:
 python (v3.3.2)
 
-Overview
-In _Intron-targeted ASOs drive activation of FXN expression through indirect effects_ we showed 
-
-
-
-
+## Overview
+In _Intron-targeted ASOs drive activation of FXN expression through indirect effects_ we showed that antisense oligonucleotides (ASOs) that were carefully designed can still have off-target effects. This script scans an input fasta file and calculates a pairing score based on the provided position-specific score matrix that can be customized according to the researchers needs.
 
 
 usage: scanMotifs_summedScore.py [-h] [--pssm PSSM] [--fasta FASTA]
