@@ -5,11 +5,27 @@ Citation: Wang F, Calvo-Roitberg E, Rembetsy-Brown J, Sousa J, Meda Krishnamurth
 
 This script scans an input fasta file for sequences that match or are complementary to the ASO sequence of interest.
 
-Requirements:
+## Requirements:
 python (v3.3.2)
 
 Overview
+In _Intron-targeted ASOs drive activation of FXN expression through indirect effects_ we showed 
 
-for threshold in 40 45 ;do for psmms in FA9 FA9_L5 FA48 FA48_SCRAMBLED FA9_L5_SCRAMBLED FA9_SCRAMBLED;do bsub -q long -n 5 -R rusage[mem=10000] -R span[hosts=1] -W 12:00 -J "$psmms"_"$threshold" -o "$psmms"_"$threshold".o -e "$psmms"_"$threshold".e python scanMotifs_summedScore.py --minscore $threshold --pssm /project/umw_athma_pai/ezequiel/FXN_damon/kmer_enrichment/"$psmms".PSSM --fasta /project/umw_athma_pai/ezequiel/FXN_damon/kmer_enrichment/upregulatedgenes.fasta --outname /project/umw_athma_pai/ezequiel/FXN_damon/kmer_enrichment/"$psmms"_"$threshold".kmerout;done;done
+
+
+
+
+
+usage: scanMotifs_summedScore.py [-h] [--pssm PSSM] [--fasta FASTA]
+                                 [--outname OUTNAME] [--distance DISTANCE]
+                                 [--minscore MINSCORE]
+
+optional arguments:
+  -h, --help           show this help message and exit
+  --pssm PSSM          pssm for motif desired - REQ
+  --fasta FASTA        fasta file to be searched (full path) - REQ
+  --outname OUTNAME    name of output file (full path) - REQ
+  --distance DISTANCE  amount of sequence to be used [full, X (nuc)]
+  --minscore MINSCORE  minimum score to report (default = 10)
 
 
