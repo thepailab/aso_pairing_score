@@ -11,7 +11,7 @@ python (v3.3.2)
 ## Overview
 In _Intron-targeted ASOs drive activation of FXN expression through indirect effects_ we showed that antisense oligonucleotides (ASOs) that were carefully designed can still have off-target effects. This script scans an input fasta file and calculates a pairing score based on the provided position-specific score matrix that can be customized according to the researchers needs.
 
-
+```
 usage: scanMotifs_summedScore.py [-h] [--pssm PSSM] [--fasta FASTA]
                                  [--outname OUTNAME] [--distance DISTANCE]
                                  [--minscore MINSCORE]
@@ -23,5 +23,5 @@ optional arguments:
   --outname OUTNAME    name of output file (full path) - REQ
   --distance DISTANCE  amount of sequence to be used [full, X (nuc)]
   --minscore MINSCORE  minimum score to report (default = 10)
-
+```
 
