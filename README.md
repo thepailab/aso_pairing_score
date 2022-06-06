@@ -30,6 +30,14 @@ optional arguments:
 ## Output
 
 
+| Column Name  | Description |
+| ------------- | ------------- |
+| chromosome  | Content Cell  |
+| pssm_start  | Content Cell  |
+| pssm_end  | Content Cell  |
+| seq  | Content Cell  |
+| pssm_score  | Content Cell  |
+| strand  | Content Cell  |
 
 
 
