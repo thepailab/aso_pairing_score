@@ -38,7 +38,7 @@ def reverse_complement(seq):
         bases = bases.replace(v,k)
     return bases
 
-# Function to read in fasta file and save it as a dictionary, where each key in the dictionary refers to one chromosome
+# Function to read in fasta file and save it as a dictionary, where each key in the dictionary refers to one feature
 def getFasta(fastafile):
     # open fasta file (.fa) - can open if zipped or not
     if fastafile[-2:] == "gz": fasta = gzip.open(fastafile)
@@ -50,7 +50,7 @@ def getFasta(fastafile):
         fastaline = fasta.readline().strip()
         # stop if reached the end of the file
         if not fastaline: break
-        # check if line indicates a chromosome, and initialize a new dictionary entry
+        # check if line indicates a feature, and initialize a new dictionary entry
         if fastaline[0] == '>':
             chr = fastaline[1:]
             fastadict[chr] = ''
@@ -83,13 +83,13 @@ def getScores(fastadict, pssm, outname, distance, minscore):
     #header for outfile: name, sequence length, highest PSSM score, position of highest scoring sequence, relative position of highest scoring sequen
 ce
     #outfile.write('gene'+'\t'+'seq_len'+'\t'+'max_PSSM_score'+'\t'+'max_PSSM_pos'+'\t'+'max_PSSM_relpos'+'seq'+'\n')
-    outfile.write('chromosome'+'\t'+'pssm_start'+'\t'+'pssm_end'+'\t'+'seq'+'\t'+'pssm_score'+'\t'+'strand'+'\n')
+    outfile.write('feature'+'\t'+'pssm_start'+'\t'+'pssm_end'+'\t'+'seq'+'\t'+'pssm_score'+'\t'+'strand'+'\n')
     # set the background sequence distribution to be equal probability of each base at each site
     pssm_bk = pow(0.25, len(pssm))
-    # go through all the chromosomes in the fasta file (as keys in the fasta dictionary)
+    # go through all the features in the fasta file (as keys in the fasta dictionary)
     for chr in fastadict.keys():
-        # get chromosome 
-        chromosome = chr
+        # get feature 
+        feature = chr
         # get the sequence in the fasta entry
         seq = fastadict[chr]
         # get the length of the sequence
