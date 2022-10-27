@@ -11,7 +11,7 @@ python (v3.3.2)
 ## Overview
 In _ G-rich motifs within phosphorothioate-based antisense oligonucleotides (ASOs) drive activation of FXN expression through indirect effects_ we showed that antisense oligonucleotides (ASOs) that were carefully designed can still have off-target effects. This script scans an input fasta file and calculates a pairing score based on the provided position-specific score matrix (pssm) that can be customized according to the researchers needs.
 
-An example of a pssm is provided here. Each column represents a base on the ASO and each row the matching nucleotide, thus, each cell is the assigned score for finding that nucleotide at a given ASO position.
+An example of a pssm is provided [here] (https://github.com/thepailab/aso_pairing_score/blob/02c6e8ae2c33e1fdacdd88d0f6d32e42662c08f4/S30.PSSM). Each column represents a base on the ASO and each row the matching nucleotide, thus, each cell is the assigned score for finding that nucleotide at a given ASO position.
 
 ```
 usage: scanMotifs_summedScore.py [-h] [--pssm PSSM] [--fasta FASTA]
