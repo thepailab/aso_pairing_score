@@ -1,6 +1,6 @@
 # Aso pairing score
 
-### Citation: Wang F, Calvo-Roitberg E, Rembetsy-Brown J, Sousa J, Meda Krishnamurthy P, Lee J, Fang M, Green M, Pai A, Watts J. (2022). Intron-targeted ASOs drive activation of FXN expression through indirect effects. (bioRxiv)
+### Citation: Wang F, Calvo-Roitberg E, Rembetsy-Brown J, Sousa J, Meda Krishnamurthy P, Lee J, Fang M, Green M, Pai A, Watts J. (2022). G-rich motifs within phosphorothioate-based antisense oligonucleotides (ASOs) drive activation of FXN expression through indirect effects (Nucleic Acids Research)
 
 
 This script scans an input fasta file for sequences that match or are complementary to the ASO sequence of interest.
