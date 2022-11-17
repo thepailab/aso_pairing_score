@@ -1,6 +1,8 @@
 # Aso pairing score
 
 ### Citation: Wang F, Calvo-Roitberg E, Rembetsy-Brown J, Sousa J, Meda Krishnamurthy P, Lee J, Fang M, Green M, Pai A, Watts J. (2022). G-rich motifs within phosphorothioate-based antisense oligonucleotides (ASOs) drive activation of FXN expression through indirect effects (Nucleic Acids Research)
+https://doi.org/10.1093/nar/gkac1108
+
 
 
 This script scans an input fasta file for sequences that match or are complementary to the ASO sequence of interest.
